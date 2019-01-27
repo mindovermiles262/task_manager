@@ -13,8 +13,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'omniauth', '~> 1.9'
-gem 'omniauth-github'
-gem 'dotenv', '~> 2.6.0'
+gem 'omniauth-github', '~> 1.3'
+gem 'dotenv', '~> 2.6'
 
 group :development, :test do
   gem 'sqlite3'
@@ -26,7 +26,6 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'pg'
 end
 
 group :test do
@@ -35,3 +34,6 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :production do
+  gem 'pg'
+end
