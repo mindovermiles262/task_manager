@@ -1,0 +1,11 @@
+<h1>Task Show</h1>
+
+
+<h4><%= @task.name %></h4>
+<h4>Due Date: <%= @task.due_date %></h4>
+<h2>Project Tasks:</h2>
+<ul>
+  <% @task.steps.each do |step| %>
+  <li><%= link_to step.name, step_path(step) %></li>
+  <% end %>
+</ul>
