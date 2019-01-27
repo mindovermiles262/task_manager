@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_27_000915) do
+ActiveRecord::Schema.define(version: 2019_01_27_003558) do
 
   create_table "projects", force: :cascade do |t|
     t.string "title"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2019_01_27_000915) do
     t.integer "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "github_issue_id"
+    t.integer "github_pull_request_id"
     t.index ["project_id"], name: "index_tasks_on_project_id"
   end
 

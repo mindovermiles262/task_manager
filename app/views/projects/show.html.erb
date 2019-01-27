@@ -1,0 +1,12 @@
+<h1>Project Show</h1>
+
+
+<h4><%= @project.title %></h4>
+<h4><%= @project.github_url %></h4>
+<h4>Due Date: <%= @project.due_date %></h4>
+<h2>Project Tasks:</h2>
+<ul>
+  <% @project.tasks.each do |task| %>
+  <li><%= link_to task.name, task_path(task) %></li>
+  <% end %>
+</ul>
