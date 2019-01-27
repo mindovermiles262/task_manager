@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   resources :projects
   resources :tasks
   resources :steps
+  get '/auth/:provider/callback', to: 'authentications#create'
 end
