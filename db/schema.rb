@@ -13,11 +13,13 @@
 ActiveRecord::Schema.define(version: 2019_01_27_170857) do
 
   create_table "authentications", force: :cascade do |t|
-    t.integer "user_id"
     t.string "provider"
     t.string "uid"
+    t.string "token"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_authentications_on_user_id"
   end
 
   create_table "projects", force: :cascade do |t|
